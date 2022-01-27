@@ -1,13 +1,116 @@
+:root {
+  --dark-green: #16a34a;
+  --light-green: #4ade80;
+  --dark-indigo: #4f46e5;
+  --light-indigo: #818cf8;
+  --dark-red: #dc2626;
+  --light-red: #f87171;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.questions-wrapper {
+  width: 1000px;
+  padding: 10px;
+}
+
+.quiz-btns {
+  margin: 15px 0;
+}
+
+.button {
+  cursor: pointer;
+  padding: 10px;
+  font-size: 15px;
+  color: #ffffff;
+  outline: none;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.ml-0 {
+  margin-left: 0;
+}
+
+.start-quiz-btn,
+.submit-quiz-btn {
+  background-color: var(--dark-green);
+  border: 1px solid var(--dark-green);
+}
+
+.submit-quiz-btn {
+  display: block;
+}
+
+.start-quiz-btn:hover,
+.submit-quiz-btn:hover {
+  border: 1px solid var(--light-green);
+  background-color: var(--light-green);
+}
+
+.prev-btn {
+  background-color: var(--dark-red);
+  border: 1px solid var(--dark-red);
+}
+
+.prev-btn:hover {
+  border: 1px solid var(--light-red);
+  background-color: var(--light-red);
+}
+
+.next-btn,
+.retake-quiz-btn {
+  background-color: var(--dark-indigo);
+  border: 1px solid var(--dark-indigo);
+}
+
+.next-btn:hover,
+.retake-quiz-btn:hover {
+  border: 1px solid var(--light-indigo);
+  background-color: var(--light-indigo);
+}
+
+.option {
+  margin: 5px 0;
+}
+
+p,
+label {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+label {
+  margin-left: 10px;
+}
+
+.timer-time {
+  font-weight: 600;
+  color: var(--dark-green);
+}
+
+.results {
+  text-align: center;
 }
