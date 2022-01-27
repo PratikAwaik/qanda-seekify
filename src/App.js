@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Question from "./components/Question";
 import ResultScreen from "./components/ResultScreen";
+import ReviewAnswers from "./components/ReviewAnswers";
 import StartScreen from "./components/StartScreen";
 import Timer from "./components/Timer";
 
@@ -66,56 +67,62 @@ function App() {
   return (
     <div className="App">
       <div className="questions-wrapper">
-        {currentNumber >= 0 && currentNumber < totalQuestions && (
-          <Timer expiryTimestamp={expiryTimestamp} submitQuiz={submitQuiz} />
-        )}
-
-        {currentNumber === -1 && (
-          <StartScreen questions={questions} startQuiz={startQuiz} />
-        )}
-
-        {currentNumber >= 0 && currentNumber < totalQuestions && (
-          <Question
-            question={currentQuestion}
-            answersSelected={answersSelected}
-            setAnswersSelected={setAnswersSelected}
-          />
-        )}
-
-        <div className="quiz-btns">
-          {currentNumber > 0 && currentNumber < totalQuestions && (
-            <button
-              className="button prev-btn ml-0"
-              onClick={gotoPreviousQuestion}
-            >
-              Prev
-            </button>
+        <div>
+          {currentNumber >= 0 && currentNumber < totalQuestions && (
+            <Timer expiryTimestamp={expiryTimestamp} submitQuiz={submitQuiz} />
           )}
 
-          {currentNumber < totalQuestions - 1 && currentNumber >= 0 && (
-            <button className="button next-btn" onClick={gotoNextQuestion}>
-              Next
-            </button>
+          {currentNumber === -1 && (
+            <StartScreen questions={questions} startQuiz={startQuiz} />
           )}
 
           {currentNumber >= 0 && currentNumber < totalQuestions && (
-            <button
-              type="button"
-              className="button submit-quiz-btn ml-0"
-              onClick={submitQuiz}
-            >
-              Submit Quiz
-            </button>
+            <Question
+              question={currentQuestion}
+              answersSelected={answersSelected}
+              setAnswersSelected={setAnswersSelected}
+            />
+          )}
+
+          <div className="quiz-btns">
+            {currentNumber > 0 && currentNumber < totalQuestions && (
+              <button
+                className="button prev-btn ml-0"
+                onClick={gotoPreviousQuestion}
+              >
+                Prev
+              </button>
+            )}
+
+            {currentNumber < totalQuestions - 1 && currentNumber >= 0 && (
+              <button className="button next-btn" onClick={gotoNextQuestion}>
+                Next
+              </button>
+            )}
+
+            {currentNumber >= 0 && currentNumber < totalQuestions && (
+              <button
+                type="button"
+                className="button submit-quiz-btn ml-0"
+                onClick={submitQuiz}
+              >
+                Submit Quiz
+              </button>
+            )}
+          </div>
+
+          {currentNumber === totalQuestions && (
+            <ResultScreen
+              resultMsg={resultMsg}
+              questions={questions}
+              answersSelected={answersSelected}
+              retakeQuiz={retakeQuiz}
+            />
           )}
         </div>
 
-        {currentNumber === totalQuestions && (
-          <ResultScreen
-            resultMsg={resultMsg}
-            questions={questions}
-            answersSelected={answersSelected}
-            retakeQuiz={retakeQuiz}
-          />
+        {currentNumber >= 0 && (
+          <ReviewAnswers answersSelected={answersSelected} />
         )}
       </div>
     </div>

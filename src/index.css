@@ -114,3 +114,9 @@ label {
 .results {
   text-align: center;
 }
+
+.review-answers {
+  border: 2px solid var(--dark-green);
+  border-radius: 5px;
+  padding: 10px;
+}
