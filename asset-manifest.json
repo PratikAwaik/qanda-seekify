@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/qanda-seekify/static/css/main.98c93654.css",
+    "main.js": "/qanda-seekify/static/js/main.3e31e460.js",
+    "index.html": "/qanda-seekify/index.html",
+    "main.98c93654.css.map": "/qanda-seekify/static/css/main.98c93654.css.map",
+    "main.3e31e460.js.map": "/qanda-seekify/static/js/main.3e31e460.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.98c93654.css",
+    "static/js/main.3e31e460.js"
+  ]
+}
