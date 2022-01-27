@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/qanda-seekify/static/css/main.98c93654.css",
-    "main.js": "/qanda-seekify/static/js/main.3e31e460.js",
+    "main.css": "/qanda-seekify/static/css/main.c5c5592e.css",
+    "main.js": "/qanda-seekify/static/js/main.b5e88b6f.js",
     "index.html": "/qanda-seekify/index.html",
-    "main.98c93654.css.map": "/qanda-seekify/static/css/main.98c93654.css.map",
-    "main.3e31e460.js.map": "/qanda-seekify/static/js/main.3e31e460.js.map"
+    "main.c5c5592e.css.map": "/qanda-seekify/static/css/main.c5c5592e.css.map",
+    "main.b5e88b6f.js.map": "/qanda-seekify/static/js/main.b5e88b6f.js.map"
   },
   "entrypoints": [
-    "static/css/main.98c93654.css",
-    "static/js/main.3e31e460.js"
+    "static/css/main.c5c5592e.css",
+    "static/js/main.b5e88b6f.js"
   ]
 }
